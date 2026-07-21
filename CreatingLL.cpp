@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct Node
+{
+public:
+    int data;
+    Node *next;
+
+public:
+    Node(int data1, Node *next1)
+    {
+        data = data1;
+        next = next1;
+    }
+};
+int main()
+{
+    vector<int> arr = {2, 5, 8, 7};
+    Node *y1 = new Node(arr[0], nullptr);
+    Node *y2 = new Node(arr[1], nullptr);
+    Node *y3 = new Node(arr[2], nullptr);
+    Node *y4 = new Node(arr[3], nullptr);
+    y1->next = y2;
+    y2->next = y3;
+    y3->next = y4;
+    cout << y1->data << " " << y1->next << " ";
+    cout << y2->data << " " << y2->next << " ";
+    cout << y3->data << " " << y3->next << " ";
+    cout << y4->data << " " << y4->next << " ";
+    return 0;
+}
